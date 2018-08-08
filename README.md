@@ -3,7 +3,8 @@
 ### Setup
 Install the dependencies and devDependencies and start the server by following simple commands.
 ```sh
-$ cd sample_react_apps
+$ git clone https://github.com/arnava17/react_sample_apps.git
+$ cd react_sample_apps
 $ npm install
 $ npm start
 ```
