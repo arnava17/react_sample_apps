@@ -3,9 +3,22 @@ import ReactDOM from "react-dom";
 import App from "./App5/App";
 
 ReactDOM.render(
-  <App />,
+<App/>,
   document.getElementById("root")
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // function tick() {

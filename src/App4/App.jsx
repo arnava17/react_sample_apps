@@ -8,11 +8,14 @@ class Clock extends Component {
     this.state = {
       time: new Date().toLocaleTimeString()
     }
-
-    this.handleClick = this.handleClick.bind(this);
+    this.i = 0;
+    this.sound = "Meow";
+    const that = this;
+    this.hc = this.handleClick.bind(that);
   }
 
   componentDidMount() {
+    console.log("mounted");
     this.timerID = setInterval(this.updateTime.bind(this), 1000);
   }
 
@@ -21,13 +24,16 @@ class Clock extends Component {
   }
 
   handleClick() {
+    console.log(this.sound);
     alert('The Button Was Clicked');
   }
 
   updateTime() {
     const time = new Date().toLocaleTimeString();
+    this.i++;
+    console.log(this.sound+this.i);
     this.setState({
-      time
+      time:time
     })
   }
 
@@ -36,7 +42,7 @@ class Clock extends Component {
       <div>
         <h1>Hello World</h1>
         <h1>It is {this.state.time}</h1>
-        <button onClick={this.handleClick}>Alert</button>
+        <button onClick={this.hc}>Alert</button>
       </div>
     );
   }
